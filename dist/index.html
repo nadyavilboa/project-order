@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+</head>
+<body class="page__body">
+    <header class="page-header">
+        <div class="container page-header__wrapper">
+            <a class="page-header__logo">LoremIpsum.<span class="blue-text">Net</span></a>
+            <button class="page-header__toggle">
+                <span class="visually-hidden">Открыть/закрыть меню</span>
+            </button>
+            <nav class="page-header__main-nav main-nav">
+                <ul class="main-nav__list menu list-reset">
+                    <li class="menu__item menu__item--active">Бизнес</li>
+                    <li class="menu__item">О нас</li>
+                    <li class="menu__item">Цены</li>
+                    <li class="menu__item">Оформить заказ</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page-main">
+        <section class="banner">
+            <div class="container">
+                <p class="banner__title">
+                    <span class="blue-text">Lorem ipsum</span> 
+                    dolor sit amet consectetur 
+                    <span class="blue-text">adipiscing</span>
+                </p>
+                <div class="banner__description">
+                    <p class="banner__subtitle">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus!
+                    </p>
+                    <ul class="banner__list advantages-list list-reset">
+                        <li class="advantages-item">Totam rem aperiam eaque ipsa</li>
+                        <li class="advantages-item">Sit voluptatem accusantium doloremque laudantium</li>
+                        <li class="advantages-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+                    </ul>
+                </div>
+                <div class="banner__wrapper-btn">
+                    <button class="banner__btn banner__btn--order">заказать</button>
+                    <button class="banner__btn">подробнее</button>
+                </div>
+            </div>
+        </section>
+        <section class="order">
+            <div class="container">
+                <h1 class="order__title">
+                    Оформление 
+                    <span class="blue-text">Заказа</span>
+                </h1>
+                <p class="order__comment">
+                    Перед заполнением формы ознакомьтесь с нашей схемой работы!
+                </p>
+                <ul class="order__process process-list list-reset">
+                    <li class="process-item">
+                        <span class="process-item__icon process-item__icon--search"></span>
+                        <p class="process-item__name">Lorem ipsum dolor sit amet</p>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-item__icon process-item__icon--procent"></span>
+                        <p class="process-item__name">Сonsecteturadipiscing elit</p>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-item__icon process-item__icon--list"></span>
+                        <p class="process-item__name">Sed do eiusmod tempor</p>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-item__icon process-item__icon--email"></span>
+                        <p class="process-item__name">Esse cillum dolore eu fugiat</p>
+                    </li>
+                    <li class="process-item">
+                        <span class="process-item__icon process-item__money"></span>
+                        <p class="process-item__name">Excepteur sint occaecat cupidatat non proident</p>
+                    </li>
+                </ul>
+                <form class="order__form form" action="" method="post" id="form-order">
+                    <div class="form__group">
+                        <select class="form__choose-system">
+                            <option disabled>Выберите тип системы</option>
+                            <option selected>Sed ut perspiciatis</option>
+                            <option>Nemo enim ipsam</option>
+                            <option>Et harum quidem</option>
+                            <option>Temporibus autem</option>
+                            <option>Itaque earum rerum</option>
+                        </select>
+                        <input id="user-email" name="user-email" type="email" placeholder="Ваш e-mail" />
+                        <input id="user-name" name="user-name" type="text" placeholder="Ваше имя" />
+                    </div>
+                    <div class="form__group">
+                        <div class="form__procent-wrapper procent">
+                            <p class="procent__text">Sed ut perspiciatis, unde omnis iste natus</p>
+                            <input class="procent__input" id="procent" name="procent" type="range" min="0" max="100" step="1" />
+                        </div>
+                        <div class="form__file-wrapper file">
+                            <span class="file__text">Прикрепить файл</span>
+                            <input class="file__input visually-hidden" id="file" name="file" type="file" />
+                        </div>
+                    </div>
+                    <button class="form__button">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <p class="footer__all-rights"> 
+                © 2018 «LoremIpsum.net» Все права защищены.
+            </p>
+            <div class="footer__payment-methods payment-methods">
+                <ul class="payment-methods list-reset">
+                    <li class="payment-methods__item payment-methods__item--qiwi">
+                        Qiwi wallet
+                    </li>
+                    <li class="payment-methods__item payment-methods__item--yandex">
+                        Yandex Money
+                    </li>
+                    <li class="payment-methods__item payment-methods__item--webmoney">
+                        Web Money
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__contacts contacts">
+                <ul class="contacts__list contacts list-reset">
+                    <li class="contact-item contact-item--email">info@ipsum228.com</li>
+                    <li class="contact-item contact-item--vk">Мы вконтакте</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
