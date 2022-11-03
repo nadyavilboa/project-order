@@ -1,0 +1,34 @@
+.page-header {
+    width: 100%;
+    background-color: $header-bg;
+    padding: 15px 0;
+
+    @media (min-width: $desktop-width) {
+        padding: 30px 0;
+    }
+}
+
+.page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header__logo {
+    color: $basic-white;
+    text-transform: uppercase;
+}
+
+.page-header__toggle {
+    width: 30px;
+    border: none;
+    height: 4px;
+    background-color: $basic-blue;
+    box-shadow: 
+        0px 8px 0px 0px $basic-blue,
+        0px 16px 0px 0px $basic-blue;
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+}

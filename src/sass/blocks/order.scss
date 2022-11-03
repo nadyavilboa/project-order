@@ -1,0 +1,17 @@
+.order {
+    background-color: $basic-black;
+    padding: 30px 0;
+
+    @media (min-width: $desktop-width) {
+        padding: 121px 0 151px;
+    }
+}
+
+.order__title {
+    color: $basic-white;
+    text-transform: uppercase;
+}
+
+.order__comment {
+    color: $order-comment;
+}
