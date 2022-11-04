@@ -1,24 +1,24 @@
-//черновик
-
-body {
+@font-face {
+    font-family: "Lato Regular";
     font-style: normal;
+    font-display: swap;
+    src:
+        url("../assets/fonts/lato-regular.woff2") format("woff2"),
+        url("../assets/fonts/lato-regular.woff") format("woff"),
+        url("../assets/fonts/lato-regular.ttf") format("ttf"),
+        url("../assets/fonts/lato-regular.eot") format("eot"),
+        url("../assets/fonts/lato-regular.otf") format("otf");
 }
-
-// @font-face {
-//     font-family: "Lato Regular";
-//     font-style: normal;
-//     font-display: swap;
-//     src:
-//       url("../fonts/oswaldregular.woff2") format("woff2"),
-//       url("../fonts/oswaldregular.woff") format("woff");
-//   }
   
-//   @font-face {
-//     font-family: "Lato Bold";
-//     font-style: normal;
-//     font-display: swap;
-//     src:
-//       url("../fonts/oswaldmedium.woff2") format("woff2"),
-//       url("../fonts/oswaldmedium.woff") format("woff");
-//   }
+@font-face {
+    font-family: "Lato Bold";
+    font-style: normal;
+    font-display: swap;
+    src:
+        url("../assets/fonts/lato-bold.woff2") format("woff2"),
+        url("../assets/fonts/lato-bold.woff") format("woff"),
+        url("../assets/fonts/lato-bold.ttf") format("ttf"),
+        url("../assets/fonts/lato-bold.eot") format("eot"),
+        url("../assets/fonts/lato-bold.otf") format("otf");
+}
   

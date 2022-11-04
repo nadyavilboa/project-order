@@ -1,0 +1,33 @@
+.file {
+    display: block;
+    width: 100%;
+}
+
+.file__text {
+    padding: 2% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'Lato Bold', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    background-color: $basic-white;
+    border: 2px solid $basic-blue;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: $special-black;
+
+    @media (min-width: $tablet-width) {
+        padding: 4% 10%;
+    }
+}
+
+.file__icon {
+    width: 17.5px;
+    height: 20px;
+    background: url("../assets/img/file-icon.png") no-repeat;
+    background-size: contain;
+    display: inline-flex;
+    margin-right: 10px;
+}

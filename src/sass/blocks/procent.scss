@@ -1,0 +1,16 @@
+.procent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+    }
+}
+
+.procent__text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: $basic-white;
+}

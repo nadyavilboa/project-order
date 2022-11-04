@@ -1,0 +1,62 @@
+.payment-methods {
+    color: $payment-text;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+        padding: 0 42px 0 40px;
+        border-left: 1px solid $payment-text;
+        border-right: 1px solid $payment-text;
+    }
+}
+
+.payment-methods__list {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.payment-methods__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        margin-right: 10px;
+    }
+
+    &--qiwi::before {
+        background: url("../assets/img/qiwi-icon.svg") no-repeat;
+    }
+
+    &--yandex::before {
+        background: url("../assets/img/yandex-icon.svg") no-repeat;
+    }
+
+    &--webmoney::before {
+        background: url("../assets/img/web-money-icon.svg") no-repeat;
+    }
+
+    &:last-child {
+        @media (min-width: $tablet-width) {
+            margin-right: 0;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+        margin-right: 38px;
+    }
+}
