@@ -1,0 +1,137 @@
+.process-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+        column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+        -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+        -webkit-column-gap: 43px;
+        -moz-column-gap: 43px;
+            column-gap: 43px;
+        row-gap: 0;
+        margin-bottom: 80px;
+    }
+}
+
+.process-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 40%;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        left: 160px;
+        top: 50px;
+        background: url("../assets/img/decorative-points.png") no-repeat;
+        display: none;
+        margin-left: 5px;
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+        width: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 17%;
+
+        &:after {
+            display: block;
+        }
+    }
+}
+
+.process-item__icon--wrapper {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+        border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: $basic-blue;
+    outline: 5px solid $border-ring;
+}
+
+.process-item__icon {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: calc(50% - 27px);
+    left: calc(50% - 27px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        &--search {
+            background-image: url("../assets/img/search-icon.png");
+        }
+    
+        &--procent {
+            background-image: url("../assets/img/procent-icon.png");
+        }
+    
+        &--list {
+            background-image: url("../assets/img/list-icon.png");
+        }
+    
+        &--email {
+            background-image: url("../assets/img/email-icon.png");
+        }
+    
+        &--money {
+            background-image: url("../assets/img/money-icon.png");
+        }
+}
+
+.process-item__name {
+    margin-top: 0;
+    color: $basic-white;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 0 10.5px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

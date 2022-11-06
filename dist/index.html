@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Project Order</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="page__body">
     <header class="page-header">
         <div class="container page-header__wrapper">
-            <a class="page-header__logo">LoremIpsum.<span class="blue-text">Net</span></a>
-            <button class="page-header__toggle">
+            <a class="page-header__logo">
+                <img class="logo-img" src="img/logo.svg" width="100" height="18" alt="Текстовый логотип Loremipsum.Net"/>
+            </a>
+            <button class="page-header__toggle" type="button">
+                <span class="page-header__toggle-icon"></span>
                 <span class="visually-hidden">Открыть/закрыть меню</span>
             </button>
             <nav class="page-header__main-nav main-nav">
                 <ul class="main-nav__list menu list-reset">
-                    <li class="menu__item menu__item--active">Бизнес</li>
-                    <li class="menu__item">О нас</li>
-                    <li class="menu__item">Цены</li>
-                    <li class="menu__item">Оформить заказ</li>
+                    <li class="menu__item menu__item--active">
+                        <a class="menu__link menu__link--active">Бизнес</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Цены</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Оформить заказ</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -28,7 +47,7 @@
             <div class="container">
                 <p class="banner__title">
                     <span class="blue-text">Lorem ipsum</span> 
-                    dolor sit amet consectetur 
+                    dolor sit ametconsectetur 
                     <span class="blue-text">adipiscing</span>
                 </p>
                 <div class="banner__description">
@@ -42,8 +61,8 @@
                     </ul>
                 </div>
                 <div class="banner__wrapper-btn">
-                    <button class="banner__btn banner__btn--order">заказать</button>
-                    <button class="banner__btn">подробнее</button>
+                    <a class="banner__btn banner__btn--order" href="#">заказать</a>
+                    <a class="banner__btn" href="#">подробнее</a>
                 </div>
             </div>
         </section>
@@ -57,78 +76,139 @@
                     Перед заполнением формы ознакомьтесь с нашей схемой работы!
                 </p>
                 <ul class="order__process process-list list-reset">
-                    <li class="process-item">
-                        <span class="process-item__icon process-item__icon--search"></span>
+                    <li class="process-list__item process-item">
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--search"></span>
+                        </div>
                         <p class="process-item__name">Lorem ipsum dolor sit amet</p>
                     </li>
-                    <li class="process-item">
-                        <span class="process-item__icon process-item__icon--procent"></span>
+                    <li class="process-list__item process-item">
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--procent"></span>
+                        </div>
                         <p class="process-item__name">Сonsecteturadipiscing elit</p>
                     </li>
-                    <li class="process-item">
-                        <span class="process-item__icon process-item__icon--list"></span>
+                    <li class="process-list__item process-item">
+                        <div class="process-item__icon--wrapper">
+                            <div class="process-item__icon--wrapper">
+                                <span class="process-item__icon process-item__icon--list"></span>
+                            </div>
+                        </div>
                         <p class="process-item__name">Sed do eiusmod tempor</p>
                     </li>
-                    <li class="process-item">
-                        <span class="process-item__icon process-item__icon--email"></span>
-                        <p class="process-item__name">Esse cillum dolore eu fugiat</p>
+                    <li class="process-list__item process-item">
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--email"></span>
+                        </div>
+                        <p class="process-item__name">Esse cillum doloreeu fugiat</p>
                     </li>
-                    <li class="process-item">
-                        <span class="process-item__icon process-item__money"></span>
+                    <li class="process-list__item process-item">
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--money"></span>
+                        </div>
                         <p class="process-item__name">Excepteur sint occaecat cupidatat non proident</p>
                     </li>
                 </ul>
-                <form class="order__form form" action="" method="post" id="form-order">
+                <form class="order__form form" action="#" method="post" id="form-order">
                     <div class="form__group">
-                        <select class="form__choose-system">
-                            <option disabled>Выберите тип системы</option>
-                            <option selected>Sed ut perspiciatis</option>
-                            <option>Nemo enim ipsam</option>
-                            <option>Et harum quidem</option>
-                            <option>Temporibus autem</option>
-                            <option>Itaque earum rerum</option>
+                        <select class="form__choose-system select-not-js">
+                            <option selected value="not choised">Выберите тип системы</option>
+                            <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+                            <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+                            <option value="Et harum quidem">Et harum quidem</option>
+                            <option value="Temporibus autem">Temporibus autem</option>
+                            <option value="Itaque earum rerum">Itaque earum rerum</option>
                         </select>
-                        <input id="user-email" name="user-email" type="email" placeholder="Ваш e-mail" />
-                        <input id="user-name" name="user-name" type="text" placeholder="Ваше имя" />
+                        <div class="form__choose-system select select-js display-none" id="type-system">
+                            <div class="select__header">
+                                <div class="select__current">Выберите тип системы</div>
+                                <div class="select__icon select__icon--open"></div>
+                            </div>
+                            <div class="select__body">
+                                <div class="select__item">Sed ut perspiciatis</div>
+                                <div class="select__item">Nemo enim ipsam</div>
+                                <div class="select__item">Et harum quidem</div>
+                                <div class="select__item">Temporibus autem</div>
+                                <div class="select__item">Itaque earum rerum</div>
+                                <div class="select__item">Sed ut perspiciatis</div>
+                                <div class="select__item">Nemo enim ipsam</div>
+                                <div class="select__item">Et harum quidem</div>
+                                <div class="select__item">Temporibus autem</div>
+                                <div class="select__item">Itaque earum rerum</div>
+                                <div class="select__item">Sed ut perspiciatis</div>
+                                <div class="select__item">Nemo enim ipsam</div>
+                                <div class="select__item">Et harum quidem</div>
+                                <div class="select__item">Temporibus autem</div>
+                                <div class="select__item">Itaque earum rerum</div>
+                            </div>
+                        </div>
+                        <input class="form__input" id="user-email" name="user-email" type="email" placeholder="Ваш e-mail" />
+                        <input  class="form__input" id="user-name" name="user-name" type="text" placeholder="Ваше имя" />
                     </div>
-                    <div class="form__group">
+                    <div class="form__group form__bottom-inputs">
                         <div class="form__procent-wrapper procent">
-                            <p class="procent__text">Sed ut perspiciatis, unde omnis iste natus</p>
-                            <input class="procent__input" id="procent" name="procent" type="range" min="0" max="100" step="1" />
+                            <div class="procent__text-wrapper">
+                                <p class="procent__text">Sed ut perspiciatis, unde omnis iste natus</p>
+                                <p class="procent__value">75%</p>
+                            </div>
+                            <input class="procent__input" id="procent" name="procent" type="range" value="75" min="0" max="100" step="1" />
                         </div>
                         <div class="form__file-wrapper file">
-                            <span class="file__text">Прикрепить файл</span>
+                            <label class="file__text" for="file">
+                                <span class="file__icon"></span>
+                                Прикрепить файл
+                            </label>
                             <input class="file__input visually-hidden" id="file" name="file" type="file" />
                         </div>
                     </div>
-                    <button class="form__button">Отправить</button>
+                    <button type="submit" class="form__button" id="form-submit">Отправить</button>
                 </form>
             </div>
         </section>
     </main>
     <footer class="page-footer">
         <div class="container">
-            <p class="footer__all-rights"> 
-                © 2018 «LoremIpsum.net» Все права защищены.
-            </p>
-            <div class="footer__payment-methods payment-methods">
-                <ul class="payment-methods list-reset">
-                    <li class="payment-methods__item payment-methods__item--qiwi">
-                        Qiwi wallet
-                    </li>
-                    <li class="payment-methods__item payment-methods__item--yandex">
-                        Yandex Money
-                    </li>
-                    <li class="payment-methods__item payment-methods__item--webmoney">
-                        Web Money
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__contacts contacts">
-                <ul class="contacts__list contacts list-reset">
-                    <li class="contact-item contact-item--email">info@ipsum228.com</li>
-                    <li class="contact-item contact-item--vk">Мы вконтакте</li>
-                </ul>
+            <div class="page-footer__wrapper">
+                <p class="page-footer__all-rights"> 
+                    © 2018 «LoremIpsum.net» Все права защищены.
+                </p>
+                <div class="page-footer__payment-methods payment-methods">
+                    <ul class="payment-methods__list list-reset">
+                        <li class="payment-methods__item payment-methods__item--qiwi">
+                            Qiwi wallet
+                        </li>
+                        <li class="payment-methods__item payment-methods__item--yandex">
+                            Yandex Money
+                        </li>
+                        <li class="payment-methods__item payment-methods__item--webmoney">
+                            Web Money
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-footer__contacts contacts">
+                    <ul class="contacts__list contacts-list list-reset">
+                        <li class="contacts__item contacts__item--email">
+                            <a href="" class="contacts__link">
+                                <span class="contacts__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none">
+                                        <path fill="#000000" d="M14.75 10.85a.275.275 0 0 1-.268.267H2.162a.275.275 0 0 1-.269-.268V4.421c.176.2.369.385.578.552 1.197.92 2.402 1.858 3.566 2.83.627.527 1.406 1.171 2.276 1.171h.017c.87 0 1.65-.644 2.277-1.172a114.812 114.812 0 0 1 3.566-2.829c.209-.167.402-.352.577-.552v6.428Zm0-8.798c0 .711-.686 1.64-1.23 2.067a517.902 517.902 0 0 0-3.357 2.654c-.443.36-1.247 1.13-1.833 1.13h-.017c-.586 0-1.39-.77-1.833-1.13a518.446 518.446 0 0 0-3.356-2.654c-.754-.594-1.23-1.423-1.23-2.377 0-.142.125-.268.267-.268h12.321c.319 0 .268.368.268.578Zm1.072-.31c0-.737-.603-1.34-1.34-1.34H2.162c-.738 0-1.34.603-1.34 1.34v9.107c0 .737.602 1.34 1.34 1.34h12.32c.737 0 1.34-.603 1.34-1.34V1.742Z"/>
+                                    </svg>
+                                </span>
+                                info@ipsum228.com
+                            </a>
+                        </li>
+                        <li class="contacts__item contacts__item--vk">
+                            <a href="" class="contacts__link">
+                                <span class="contacts__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="none">
+                                        <path fill="#000000" d="M11.18 9.286c0 .65-.123 1.222-.369 1.714s-.577.9-.993 1.222a4.598 4.598 0 0 1-1.626.826c-.586.164-1.333.246-2.241.246H.713V.207h4.623c.96 0 1.687.038 2.18.114.497.07.963.223 1.397.457.469.252.817.59 1.046 1.011.234.422.351.908.351 1.46 0 .638-.16 1.206-.483 1.704a2.793 2.793 0 0 1-1.318 1.099v.07c.808.17 1.456.519 1.942 1.046.486.522.73 1.228.73 2.118ZM6.97 3.907c0-.21-.055-.427-.167-.65a.961.961 0 0 0-.5-.483 2.042 2.042 0 0 0-.774-.15 36.06 36.06 0 0 0-1.318-.017h-.229v2.768h.413c.563 0 .955-.006 1.178-.017.229-.012.463-.074.703-.185.264-.123.445-.293.545-.51.1-.217.15-.469.15-.756Zm.827 5.318c0-.405-.082-.721-.246-.95-.165-.228-.41-.4-.739-.518-.199-.076-.474-.117-.826-.123a43.437 43.437 0 0 0-1.397-.018h-.607v3.279h.176c.855 0 1.447-.006 1.775-.018.328-.012.662-.09 1.002-.237.3-.13.516-.317.65-.563.141-.252.212-.536.212-.852Z"/>
+                                    </svg>
+                                </span>
+                                Мы вконтакте
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>

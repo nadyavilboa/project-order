@@ -1,0 +1,205 @@
+.procent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        height: fit-content;
+    }
+}
+
+.procent__text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    color: $basic-white;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 10px;
+    }
+}
+
+.procent__text,
+.procent__value {
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+
+    @media (min-width: $desktop-width) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.procent__value {
+    color: rgba($basic-white, 0.85);
+}
+
+input[type=range].procent__input {
+    height: 37px;
+    -webkit-appearance: none;
+        appearance: none;
+    background: transparent;
+    margin: 0;
+}
+  
+input[type=range].procent__input:focus {
+    outline: none;
+}
+  
+/*webkit*/
+input[type=range].procent__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+        appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3em;
+    background: $border-trumb;
+    border: 3px solid $border-ring;
+    -webkit-box-shadow: 0 0 2px $basic-black;
+        box-shadow: 0 0 2px $basic-black;
+    margin-top: calc(max((6px - 1px - 1px) * 0.5,0px) - max(24px * 0.5,3px));
+}
+  
+input[type=range].procent__input::-webkit-slider-runnable-track {
+    height: 6px;
+    border: 1px solid $basic-white;
+    border-radius: 0.5em;
+    background: $range-gray;
+    -webkit-box-shadow: none;
+        box-shadow: none;
+}
+  
+input[type=range].procent__input::-webkit-slider-thumb:hover {
+    background: $trumb-hover;
+    border-color: $border-trumb-hover;
+}
+
+input[type=range].procent__input:hover::-webkit-slider-runnable-track {
+    background: $track-hover;
+    border-color: $border-track-hover;
+}
+  
+input[type=range].procent__input::-webkit-slider-thumb:active {
+    background: $track-active;
+    border-color: $border-trumb-hover;
+}
+
+input[type=range].procent__input:active::-webkit-slider-runnable-track {
+    background: $track-active;
+    border-color: $border-track-active;
+}
+  
+/*mozilla*/
+input[type=range].procent__input::-moz-range-thumb {
+    width: max(calc(24px - 3px - 3px),0px);
+    height: max(calc(24px - 3px - 3px),0px);
+    border-radius: 3em;
+    background: $border-trumb;
+    border: 3px solid $border-ring;
+    -webkit-box-shadow: 0 0 2px $basic-black;
+        box-shadow: 0 0 2px $basic-black;
+}
+
+input[type=range].procent__input::-moz-range-track {
+    height: max(calc(6px - 1px - 1px),0px);
+    border: 1px solid $basic-white;
+    border-radius: 0.5em;
+    background: $range-gray;
+    -webkit-box-shadow: none;
+        box-shadow: none;
+}
+  
+input[type=range].procent__input::-moz-range-thumb:hover {
+    background: $trumb-hover;
+    border-color: $border-trumb-hover;
+}
+
+input[type=range].procent__input:hover::-moz-range-track {
+    background: $track-hover;
+    border-color: $border-track-hover;
+}
+
+input[type=range].procent__input::-moz-range-thumb:active {
+    background: $track-active;
+    border-color: $border-trumb-hover;
+}
+  
+input[type=range].procent__input:active::-moz-range-track {
+    background: $track-active;
+    border-color: $border-track-active;
+}
+
+/*ms*/
+input[type=range].procent__input::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range].procent__input::-ms-fill-lower {
+    background: transparent;
+    border-color: transparent;
+}
+  
+input[type=range].procent__input::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 3em;
+    background: $border-trumb;
+    border: 3px solid $border-ring;
+    -webkit-box-shadow: 0 0 2px $basic-black;
+        box-shadow: 0 0 2px $basic-black;
+    margin-top: 0;
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+input[type=range].procent__input::-ms-track {
+    height: 6px;
+    border-radius: 0.5em;
+    background: $range-gray;
+    border: 1px solid $basic-white;
+    -webkit-box-shadow: none;
+        box-shadow: none;
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+  
+input[type=range].procent__input::-ms-thumb:hover {
+    background: $trumb-hover;
+    border-color: $border-trumb-hover;
+}
+
+input[type=range].procent__input:hover::-ms-track {
+    background: $track-hover;
+    border-color: $border-track-hover;
+}
+
+input[type=range].procent__input::-ms-thumb:active {
+    background: $track-active;
+    border-color: $border-trumb-hover;
+}
+
+input[type=range].procent__input:active::-ms-track {
+    background: $track-active;
+    border-color: $border-track-active;
+}
+  

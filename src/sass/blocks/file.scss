@@ -1,0 +1,52 @@
+.file {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $desktop-width) {
+        width: 50%;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    }
+}
+
+.file__text {
+    padding: 2% 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: $site-fonts;
+    font-weight: 600;
+    background-color: $basic-white;
+    border: 2px solid $basic-blue;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: $special-black;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+        padding: 4% 10%;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 4.1% 10%;
+    }
+}
+
+.file__icon {
+    width: 17.5px;
+    height: 20px;
+    background: url("../assets/img/file-icon.png") no-repeat;
+    background-size: contain;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 10px;
+}

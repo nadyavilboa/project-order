@@ -1,0 +1,108 @@
+.banner {
+    background: url("../assets/img/full-img.jpg") no-repeat;
+    background-size: cover;
+    padding: 60px 0 30px;
+
+    @media (min-width: $tablet-width) {
+        padding: 80px 0 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 150px 0 200px;
+    }
+}
+
+.banner__title {
+    font-family: $site-fonts;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    max-width: 250px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 30px;
+        line-height: 42px;
+        margin-bottom: 60px;
+        max-width: 550px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 80px;
+        max-width: 780px;
+    }
+}
+
+.banner__subtitle {
+    font-family: $site-fonts;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.banner__list {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 80px;
+    }
+}
+
+.banner__wrapper-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner__btn {
+    padding: 2% 10%;
+    max-width: 185px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    background-color: $basic-white;
+    border: 1px solid $border-btn;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: $btn-text;
+
+    @media (min-width: $desktop-width) {
+        padding: 1.5% 10%;
+    }
+}
+
+.banner__btn--order {
+    background-color: $basic-blue;
+    color: $basic-white;
+    border: 1px solid $basic-white;
+    margin-right: 30px;;
+    transition: all 1s ease-in;
+
+    &:hover {
+        transform: skew(-10deg);
+        background-color: $basic-white;
+        color: $basic-black;
+        border: 1px solid $basic-black;
+    }
+}

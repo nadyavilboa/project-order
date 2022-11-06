@@ -2,6 +2,7 @@
     width: 100%;
     background-color: $header-bg;
     padding: 15px 0;
+    position: fixed;
 
     @media (min-width: $desktop-width) {
         padding: 30px 0;
@@ -9,26 +10,82 @@
 }
 
 .page-header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 }
 
 .page-header__logo {
-    color: $basic-white;
-    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+}
+
+.page-header__logo .logo-img {
+    width: 120px;
+    height: 38px;
+
+    @media (min-width: $tablet-width) {
+        width: 200px;
+        height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 250px;
+        height: 36px;
+    }
 }
 
 .page-header__toggle {
     width: 30px;
+    height: 20px;
+    background-color: transparent;
     border: none;
-    height: 4px;
-    background-color: $basic-blue;
-    box-shadow: 
-        0px 8px 0px 0px $basic-blue,
-        0px 16px 0px 0px $basic-blue;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    cursor: pointer;
 
     @media (min-width: $tablet-width) {
         display: none;
     }
+}
+
+.page-header__toggle-icon {
+    width: 30px;
+    display: block;
+    background-color: $basic-blue;
+}
+
+.page-header__toggle-icon--close {
+    width: 22px;
+    height: 22px; 
+    -webkit-box-shadow: none; 
+        box-shadow: none;
+    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.page-header__toggle-icon--open {
+    border: 1px solid $basic-blue;
+    height: 4px;
+    -webkit-box-shadow: 
+        0px 8px 0px 0px $basic-blue,
+        0px 16px 0px 0px $basic-blue;
+            box-shadow: 
+                0px 8px 0px 0px $basic-blue,
+                0px 16px 0px 0px $basic-blue;
 }

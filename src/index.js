@@ -1,3 +1,3 @@
 import './sass/main.scss'
 
-const main = require('./js/main');
+const main = require('./js/main')
