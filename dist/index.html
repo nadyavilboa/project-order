@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Order</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body class="page__body">
     <header class="page-header">
@@ -16,15 +19,24 @@
             <a class="page-header__logo">
                 <img class="logo-img" src="img/logo.svg" width="100" height="18" alt="Текстовый логотип Loremipsum.Net"/>
             </a>
-            <button class="page-header__toggle">
+            <button class="page-header__toggle" type="button">
+                <span class="page-header__toggle-icon"></span>
                 <span class="visually-hidden">Открыть/закрыть меню</span>
             </button>
             <nav class="page-header__main-nav main-nav">
                 <ul class="main-nav__list menu list-reset">
-                    <li class="menu__item menu__item--active">Бизнес</li>
-                    <li class="menu__item">О нас</li>
-                    <li class="menu__item">Цены</li>
-                    <li class="menu__item">Оформить заказ</li>
+                    <li class="menu__item menu__item--active">
+                        <a class="menu__link menu__link--active">Бизнес</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Цены</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Оформить заказ</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -48,8 +60,8 @@
                     </ul>
                 </div>
                 <div class="banner__wrapper-btn">
-                    <button class="banner__btn banner__btn--order">заказать</button>
-                    <button class="banner__btn">подробнее</button>
+                    <a class="banner__btn banner__btn--order" href="#">заказать</a>
+                    <a class="banner__btn" href="#">подробнее</a>
                 </div>
             </div>
         </section>
@@ -64,36 +76,71 @@
                 </p>
                 <ul class="order__process process-list list-reset">
                     <li class="process-list__item process-item">
-                        <span class="process-item__icon process-item__icon--search"></span>
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--search"></span>
+                        </div>
                         <p class="process-item__name">Lorem ipsum dolor sit amet</p>
                     </li>
                     <li class="process-list__item process-item">
-                        <span class="process-item__icon process-item__icon--procent"></span>
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--procent"></span>
+                        </div>
                         <p class="process-item__name">Сonsecteturadipiscing elit</p>
                     </li>
                     <li class="process-list__item process-item">
-                        <span class="process-item__icon process-item__icon--list"></span>
+                        <div class="process-item__icon--wrapper">
+                            <div class="process-item__icon--wrapper">
+                                <span class="process-item__icon process-item__icon--list"></span>
+                            </div>
+                        </div>
                         <p class="process-item__name">Sed do eiusmod tempor</p>
                     </li>
                     <li class="process-list__item process-item">
-                        <span class="process-item__icon process-item__icon--email"></span>
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--email"></span>
+                        </div>
                         <p class="process-item__name">Esse cillum doloreeu fugiat</p>
                     </li>
                     <li class="process-list__item process-item">
-                        <span class="process-item__icon process-item__icon--money"></span>
+                        <div class="process-item__icon--wrapper">
+                            <span class="process-item__icon process-item__icon--money"></span>
+                        </div>
                         <p class="process-item__name">Excepteur sint occaecat cupidatat non proident</p>
                     </li>
                 </ul>
-                <form class="order__form form" action="" method="post" id="form-order">
+                <form class="order__form form" action="#" method="post" id="form-order">
                     <div class="form__group">
-                        <select class="form__choose-system">
-                            <option selected>Выберите тип системы</option>
-                            <option>Sed ut perspiciatis</option>
-                            <option>Nemo enim ipsam</option>
-                            <option>Et harum quidem</option>
-                            <option>Temporibus autem</option>
-                            <option>Itaque earum rerum</option>
+                        <select class="form__choose-system select-not-js">
+                            <option selected value="not choised">Выберите тип системы</option>
+                            <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+                            <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+                            <option value="Et harum quidem">Et harum quidem</option>
+                            <option value="Temporibus autem">Temporibus autem</option>
+                            <option value="Itaque earum rerum">Itaque earum rerum</option>
                         </select>
+                        <div class="form__choose-system select select-js display-none" id="type-system">
+                            <div class="select__header">
+                                <div class="select__current">Выберите тип системы</div>
+                                <div class="select__icon select__icon--open"></div>
+                            </div>
+                            <div class="select__body">
+                                <div class="select__item">Sed ut perspiciatis</div>
+                                <div class="select__item">Nemo enim ipsam</div>
+                                <div class="select__item">Et harum quidem</div>
+                                <div class="select__item">Temporibus autem</div>
+                                <div class="select__item">Itaque earum rerum</div>
+                                <div class="select__item">Sed ut perspiciatis</div>
+                                <div class="select__item">Nemo enim ipsam</div>
+                                <div class="select__item">Et harum quidem</div>
+                                <div class="select__item">Temporibus autem</div>
+                                <div class="select__item">Itaque earum rerum</div>
+                                <div class="select__item">Sed ut perspiciatis</div>
+                                <div class="select__item">Nemo enim ipsam</div>
+                                <div class="select__item">Et harum quidem</div>
+                                <div class="select__item">Temporibus autem</div>
+                                <div class="select__item">Itaque earum rerum</div>
+                            </div>
+                        </div>
                         <input class="form__input" id="user-email" name="user-email" type="email" placeholder="Ваш e-mail" />
                         <input  class="form__input" id="user-name" name="user-name" type="text" placeholder="Ваше имя" />
                     </div>
@@ -113,7 +160,7 @@
                             <input class="file__input visually-hidden" id="file" name="file" type="file" />
                         </div>
                     </div>
-                    <button class="form__button">Отправить</button>
+                    <button type="submit" class="form__button" id="form-submit">Отправить</button>
                 </form>
             </div>
         </section>

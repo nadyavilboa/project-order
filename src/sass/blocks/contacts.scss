@@ -1,10 +1,20 @@
 .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
 
     @media (min-width: $tablet-width) {
-        flex-direction: row;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     }
 
     @media (min-width: $desktop-width) {
@@ -34,9 +44,19 @@
 
 .contacts__link {
     color: $basic-white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+    &:hover {
+        color: $basic-blue; 
+    }
 }
 
 .contacts__icon {
@@ -45,11 +65,9 @@
 
 .contacts__icon path {
     fill: $basic-blue;
-    transition: all 0.5s ease-in-out;
-}
-
-.contacts__link:hover {
-    color: $basic-blue;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 }
 
 .contacts__link:hover .contacts__icon path {

@@ -1,0 +1,114 @@
+.select {
+    color: $basic-white;
+    position: relative;
+}
+
+.select.is-active .select__header,
+.select-not-js {
+    background-color: $select-active;
+    color: $basic-white;
+    border: 1px solid $select-active;
+}
+
+.select-not-js {
+    color: $special-black;
+    padding: 2%;
+
+    @media (min-width: $tablet-width) {
+        padding: 15px;
+    }
+}
+
+.select__header {
+    background-color: rgba($basic-white, 0.85);
+    border: 1px solid rgba($basic-white, 0.85);
+    color: $special-black;
+    padding: 2%;
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+        padding: 15px;
+    }
+}
+
+.select__icon {
+    display: inline-block;
+    padding: 2px;
+}
+
+.select__icon--open {
+    border: solid $basic-black;
+    border-width: 0 1px 1px 0;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+
+.select__icon--close {
+    -ms-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    border: solid $basic-white;
+    border-width: 0 1px 1px 0;
+}
+
+.select__body {
+    border: 1px solid $footer-bg;
+    background-color: $special-black;
+    padding: 10px;
+    display: none;
+    overflow-y: scroll;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    height: 205px;
+}
+
+.select__body::-webkit-scrollbar {
+    width: 7px;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.select__body::-webkit-scrollbar-track {
+    background-color: $footer-bg;
+}
+  
+.select__body::-webkit-scrollbar-thumb {
+    background-color: $basic-blue;
+    border-radius: 3px;
+}
+
+.select__body {
+    scrollbar-width: thin;          
+    scrollbar-color: $basic-blue $footer-bg;   
+}
+
+.select.is-active .select__body {
+    display: block;
+}
+
+.select__item {
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: $basic-blue;
+        cursor: pointer;
+    }
+}

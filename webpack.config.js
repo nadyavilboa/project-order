@@ -30,13 +30,6 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.woff2?|eot|ttf|otf$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'fonts/[name][ext]'
-                }
-            },
-            {
                 test: /\.png|svg|jpg|jpeg$/,
                 type: 'asset/resource',
                 generator: {

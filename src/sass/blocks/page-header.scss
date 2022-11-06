@@ -10,14 +10,29 @@
 }
 
 .page-header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+}
+
+.page-header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 }
 
 .page-header__logo .logo-img {
-    width: 100px;
-    height: 18px;
+    width: 120px;
+    height: 38px;
 
     @media (min-width: $tablet-width) {
         width: 200px;
@@ -32,24 +47,45 @@
 
 .page-header__toggle {
     width: 30px;
-    background-color: $basic-blue;
-    align-self: flex-start;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    cursor: pointer;
 
     @media (min-width: $tablet-width) {
         display: none;
     }
 }
 
-.page--header__toggle--close {
-    height: 30px; 
-    box-shadow: none;
-    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+.page-header__toggle-icon {
+    width: 30px;
+    display: block;
+    background-color: $basic-blue;
 }
 
-.page--header__toggle--open {
+.page-header__toggle-icon--close {
+    width: 22px;
+    height: 22px; 
+    -webkit-box-shadow: none; 
+        box-shadow: none;
+    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.page-header__toggle-icon--open {
     border: 1px solid $basic-blue;
     height: 4px;
-    box-shadow: 
+    -webkit-box-shadow: 
         0px 8px 0px 0px $basic-blue,
         0px 16px 0px 0px $basic-blue;
+            box-shadow: 
+                0px 8px 0px 0px $basic-blue,
+                0px 16px 0px 0px $basic-blue;
 }

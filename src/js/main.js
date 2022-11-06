@@ -1,32 +1,27 @@
-const mediaQueryTablet = window.matchMedia('(min-width: 768px)');
-const mediaQueryDesktop = window.matchMedia('(min-width: 1280px)');
+import { toggleMenu, resizeWindow } from './menu.js';
+import { selectActive,selectChange } from './select.js';
+
+const mediaQueryTablet = window.matchMedia('(min-width: 880px)');
 
 const menu = document.querySelector('.main-nav');
 const buttonToggle = document.querySelector('.page-header__toggle');
+const buttonToggleIcon = buttonToggle.querySelector('.page-header__toggle-icon');
 
-const toggleMenu = () => {
-    console.log('toggle');
-    if(menu.classList.contains('main-nav--script-close')) {
-        menu.classList.remove('main-nav--script-close');
-        menu.classList.add('main-nav--script-open');
+const form = document.querySelector('#form-order');
+const procentContainer = form.querySelector('.form__procent-wrapper');
+const procentInput = procentContainer.querySelector('#procent');
+const procentTextValue = procentContainer.querySelector('.procent__value');
 
-        buttonToggle.classList.remove('page--header__toggle--open');
-        buttonToggle.classList.add('page--header__toggle--close');
-    } else {
-        menu.classList.remove('main-nav--script-open');
-        menu.classList.add('main-nav--script-close');
+const selectNotJS = document.querySelector('.select-not-js');
+const select = form.querySelector('#type-system');
+const selectHeader = select.querySelector('.select__header');
+const selectArrow = selectHeader.querySelector('.select__icon');
+const selectItemCollection = select.querySelectorAll('.select__item');
 
-        buttonToggle.classList.remove('page--header__toggle--close')
-        buttonToggle.classList.add('page--header__toggle--open');
-    }
-}
+const btnSubmit = form.querySelector('#form-submit');
 
-const resizeWindow = () => {
-    if (mediaQueryTablet.matches) {
-      menu.classList.remove('main-nav--script-close');
-    } else {
-      menu.classList.add('main-nav--script-close');
-    }
+const printValueProcent = (input) => {
+    procentTextValue.textContent = String(input.value) + ' %';
 }
 
 if (!mediaQueryTablet.matches) {
@@ -41,7 +36,28 @@ if (!mediaQueryTablet.matches) {
     }
 }
 
-buttonToggle.classList.add('page--header__toggle--open');
+buttonToggleIcon.classList.add('page-header__toggle-icon--open');
 buttonToggle.addEventListener('click', toggleMenu);
 
 window.addEventListener('resize', resizeWindow);
+
+procentInput.addEventListener('change', (evt) => printValueProcent(evt.target));
+
+selectNotJS.classList.add('display-none');
+select.classList.remove('display-none');
+selectHeader.addEventListener('click', () => selectActive(select));
+selectItemCollection.forEach((selectItem) => 
+    selectItem.addEventListener('click', () => selectChange(selectItem, select))
+);
+
+document.addEventListener( 'click', (evt) => {
+	const withinBoundaries = evt.composedPath().includes(select);
+ 
+	if ( ! withinBoundaries ) {
+		select.classList.remove('is-active');
+        selectArrow.classList.remove('select__icon--close');
+        selectArrow.classList.add('select__icon--open');
+	}
+});
+
+btnSubmit.addEventListener('click', (evt) => evt.preventDefault());

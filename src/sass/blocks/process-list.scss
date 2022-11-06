@@ -1,8 +1,15 @@
 .process-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+        column-gap: 30px;
     row-gap: 30px;
     margin-bottom: 30px;
 
@@ -11,17 +18,28 @@
     }
 
     @media (min-width: $desktop-width) {
-        justify-content: initial;
-        column-gap: 43px;
+        -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+        -webkit-column-gap: 43px;
+        -moz-column-gap: 43px;
+            column-gap: 43px;
         row-gap: 0;
         margin-bottom: 80px;
     }
 }
 
 .process-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
     width: 40%;
     text-align: center;
     position: relative;
@@ -55,46 +73,49 @@
     }
 }
 
-.process-item__icon {
+.process-item__icon--wrapper {
     width: 100px;
     height: 100px;
-    background-size: contain;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+        border-radius: 50%;
+    margin-bottom: 20px;
     position: relative;
     background-color: $basic-blue;
     outline: 5px solid $border-ring;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    position: relative;
+}
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: calc(50% - 27px);
-        left: calc(50% - 27px);
-        width: 55px;
-        height: 55px;
-        background-repeat: no-repeat;
-    }
+.process-item__icon {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: calc(50% - 27px);
+    left: calc(50% - 27px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+        border-radius: 50%;
 
-    &--search::before {
-        background-image: url("../assets/img/search-icon.png");
-    }
-
-    &--procent::before {
-        background-image: url("../assets/img/procent-icon.png");
-    }
-
-    &--list::before {
-        background-image: url("../assets/img/list-icon.png");
-    }
-
-    &--email::before {
-        background-image: url("../assets/img/email-icon.png");
-    }
-
-    &--money::before {
-        background-image: url("../assets/img/money-icon.png");
-    }
+        &--search {
+            background-image: url("../assets/img/search-icon.png");
+        }
+    
+        &--procent {
+            background-image: url("../assets/img/procent-icon.png");
+        }
+    
+        &--list {
+            background-image: url("../assets/img/list-icon.png");
+        }
+    
+        &--email {
+            background-image: url("../assets/img/email-icon.png");
+        }
+    
+        &--money {
+            background-image: url("../assets/img/money-icon.png");
+        }
 }
 
 .process-item__name {
