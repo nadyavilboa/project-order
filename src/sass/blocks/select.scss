@@ -5,9 +5,9 @@
 
 .select.is-active .select__header,
 .select-not-js {
-    background-color: $select-active;
-    color: $basic-white;
-    border: 1px solid $select-active;
+    background-color: rgba(255,255,255,.85);
+    border: 1px solid rgba(255,255,255,.85);
+    color: $special-black;
 }
 
 .select-not-js {
