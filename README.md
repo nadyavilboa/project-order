@@ -7,3 +7,5 @@
   <li><b>npm run start</b></li>
 </ol>
 <p align="right">Author: Nadezhda Vilboa</p>
+
+<p>Посмотреть в браузере можно по <a href="https://nadyavilboa.github.io/order-test/">ссылке</a></p>
